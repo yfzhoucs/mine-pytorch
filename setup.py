@@ -8,7 +8,7 @@ setuptools.setup(
     description="An implementation of the MINE algorithm in Pytorch",
     long_description="",
     long_description_content_type="",
-    url="https://github.com/gtegner/mine-pytorch",
+    url="https://github.com/yfzhoucs/mine-pytorch",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -18,13 +18,14 @@ setuptools.setup(
     python_requires='>=3.6',
     install_requires = [
         'pytorch_lightning',
-#        'pytorch_lightning==0.6.0',
-#        'matplotlib==3.1.2',
-#        'numpy==1.17.4',
-#        'tqdm==4.40.2',
-#        'torch==1.3.1',
-#        'torchvision==0.4.2',
-#        'scikit_learn==0.22.1',
-#        'pillow<7'
+        'celluloid',
+        'pytorch_lightning',
+        'matplotlib',
+        'numpy',
+        'tqdm',
+        'torch',
+        'torchvision',
+        'scikit_learn',
+        'pillow'
     ]
 )

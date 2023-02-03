@@ -49,27 +49,10 @@ The implemented experiments can be found in the `All Experiments.ipynb` notebook
 
 MINE relies on a statistics network `T` which takes as input two variables X, Y and estimates the mutual information MI(X,Y).
 
-```python
-from mine.models.mine import Mine
-statistics_network = nn.Sequential(
-    nn.Linear(x_dim + y_dim, 100),
-    nn.ReLU(),
-    nn.Linear(100, 100),
-    nn.ReLU(),
-    nn.Linear(100, 1)
-)
-
-mine = Mine(
-    T = statistics_network,
-    loss = 'mine' #mine_biased, fdiv
-    method = 'concat'
-)
-
-joint_samples = np.random.multivariate_normal(mu = np.array([0,0]), cov = np.array([[1, 0.2], [0.2, 1]]))
-
-X, Y = joint_samples[:, 0], joint_samples[:, 1]
-
-mi = mine.optimize(X, Y, iters = 100)
+Run a quick example:
+```
+cd mine
+python increase_decrease_mutual_info.py
 ```
 
 ## Results
